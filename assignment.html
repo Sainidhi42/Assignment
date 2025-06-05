@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile Page</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      color: darkblue;
+    }
+
+    .profile {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      border-radius: 50%;
+      border: 2px solid #333;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: green;
+    }
+
+    form {
+      border: 1px solid #ccc;
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: darkblue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Profile Page</h1>
+
+  <div class="profile">
+    <img src="profile.jpeg" alt="profile Photo" class="profile-photo" />
+    <p>
+      Hi! I'm <span class="highlight">nidhi</span>, a student. I enjoy painting and reading novels.
+    </p>
+  </div>
+
+  <button onclick="sayHello()">Say Hello</button>
+
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function sayHello() {
+      const name = prompt("What's your name?");
+      if (name) {
+        alert(`Hello, ${name}!`);
+      }
+    }
+  </script>
+</body>
+</html>
